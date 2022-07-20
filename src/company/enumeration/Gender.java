@@ -1,5 +1,12 @@
-package company.enums;
+package company.enumeration;
 
-public class Gender {
+public enum Gender {
+    MALE("MALE"),
+    FEMALE("FEMALE");
 
+    private final String gender;
+
+    Gender(String gender) {
+        this.gender = gender;
+    }
 }

@@ -1,2 +1,7 @@
-package company.exp;public class AlreadyExistsException {
+package company.exp;
+
+public class AlreadyExistsException extends RuntimeException{
+    public AlreadyExistsException(String message) {
+        super(message);
+    }
 }

@@ -1,25 +1,16 @@
-package company.entitiy;
+package company.entitiy.base;
 
-import company.enums.Gender;
+import company.entitiy.info.AdditionalInfo;
+import company.enumeration.Gender;
 
 import java.time.LocalDate;
 
-public class Student {
-    private String id;
+public class Student extends AdditionalInfo {
     private String fullName;
     private String nationality;
     private Gender gender;
-    private Faculty faculty;
+    private String faculty;
     private LocalDate admissionYear;
-
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getFullName() {
         return fullName;
@@ -45,11 +36,11 @@ public class Student {
         this.gender = gender;
     }
 
-    public Faculty getFaculty() {
+    public String getFaculty() {
         return faculty;
     }
 
-    public void setFaculty(Faculty faculty) {
+    public void setFaculty(String faculty) {
         this.faculty = faculty;
     }
 
@@ -59,5 +50,27 @@ public class Student {
 
     public void setAdmissionYear(LocalDate admissionYear) {
         this.admissionYear = admissionYear;
+    }
+
+    public Student(String id, String fullName, String nationality, Gender gender, String faculty, LocalDate admissionYear) {
+        super(id);
+        this.fullName = fullName;
+        this.nationality = nationality;
+        this.gender = gender;
+        this.faculty = faculty;
+        this.admissionYear = admissionYear;
+    }
+
+    public Student( String fullName, String nationality, Gender gender, String faculty, LocalDate admissionYear) {
+        this.fullName = fullName;
+        this.nationality = nationality;
+        this.gender = gender;
+        this.faculty = faculty;
+        this.admissionYear = admissionYear;
+    }
+
+
+
+    public Student() {
     }
 }
